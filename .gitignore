@@ -1,0 +1,9 @@
+.venv/
+codegen.sv
+dump.vcd
+obj_dir/
+results.xml
+sim_build/
+tb/.venv/
+tb/__pycache__/
+verilator/

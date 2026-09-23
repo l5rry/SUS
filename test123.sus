@@ -1,0 +1,6 @@
+module test123 {
+  input bool a
+  input bool b
+  output bool c
+  c = a & b
+}
