@@ -1,11 +1,15 @@
 module convolution {
-    input int#(FROM: 0, TO: 256) din
-    output int#(FROM: 0, TO: 2048) dout
+    	input int#(FROM: 0, TO: 256) din
+    	state output int#(FROM: 0, TO: 5120) dout
 
-    state int#(FROM: 0, TO: 512) mult_1
-    state int#(FROM: 0, TO: 2048) mult_2
+    	state int#(FROM: 0, TO: 512) mult_1
+    	state int#(FROM: 0, TO: 1280) mult_2
+	state int#(FROM: 0, TO: 2304) mult_3
+	state int#(FROM: 0, TO: 3584) mult_4
 
-    mult_1 = din * 2
-    mult_2 = (din * 3) + mult_1
-    dout = mult_2
+    	mult_1 = din * 2
+    	mult_2 = (din * 3) + mult_1
+    	mult_3 = (din * 4) + mult_2
+    	mult_4 = (din * 5) + mult_3
+    	dout = (din * 6) + mult_4
 }
